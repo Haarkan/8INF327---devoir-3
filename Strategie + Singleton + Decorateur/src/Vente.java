@@ -2,7 +2,7 @@
 public class Vente {
 	private int id;
 	private int profil;
-	private int prixDeVente;
+	private double prixDeVente;
 	private String nomVille;
 	private Produit produit;
 	
@@ -16,10 +16,13 @@ public class Vente {
 		return id;
 	}
 	
+	public double getPrix () {
+		return prixDeVente;
+	}
 	public void valider () {
 		
 	}
-	public Vente(int id, int profil, int prixDeVente, String nomVille, Produit produit, int idUser) {
+	public Vente(int id, int profil, double prixDeVente, String nomVille, Produit produit, int idUser) {
 		super();
 		this.id = id;
 		this.profil = profil;

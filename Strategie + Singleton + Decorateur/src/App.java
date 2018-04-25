@@ -13,6 +13,12 @@ public class App {
 		VenteService.getInstance().changerStrategie(new FiltreNom("Chicoutimi"));
 		System.out.println("Filtre par strategy :");
 		VenteService.getInstance().filtrerParStrategie();
+		System.out.println("Vente sans prix de groupe : ");
+		Vente venteBasique = new Vente(3, 5 ,15, "Jonquière", new Produit (2, "Burger", 12, ""), 1 );
+		System.out.println(venteBasique.getPrix());
+		System.out.println("Même vente mais spéciale avec prix de groupe :");
+		Vente venteSpeciale = new VenteAvecReductionDeGroupe(3, 5 ,15, "Jonquière", new Produit (2, "Burger", 12, ""), 1 );
+		System.out.println(venteSpeciale.getPrix());
 	}
 
 	
